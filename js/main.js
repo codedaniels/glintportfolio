@@ -152,10 +152,8 @@
                     } else if ($(event.target)[0].tagName === "A" || $(event.target).parent()[0].tagName === "A") {
                        if (event.target.classList.contains('fa')) {
                             var theLink = event.target.parentElement.href;
-                            console.log('theLink of parent = ', theLink)
                             window.open(theLink, '_blank');
                         } else {
-                            console.log('linky de non parent = ', event.target.href)
                             window.open(event.target.href, '_blank');
 
                         }
