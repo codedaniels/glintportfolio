@@ -135,21 +135,37 @@
             // bind click event
             $folioItems.each(function(i) {
 
-                $(this).on('click', function(e) {
-                    e.preventDefault();
+                $(this).on('click', function(event) {
+                    // console.log("This is the current target", event.target);
+                    event.preventDefault();
                     var options = {
                         index: i,
                         showHideOpacity: true
                     }
+                    // var event = e ? e:window.event;
+                    // this.target = event.ctrlKey?"_blank":"_self";
 
                     // initialize PhotoSwipe
-                    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-                    lightBox.init();
+                    if ($(event.target).hasClass("thumb-link")) {
+                        var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+                        lightBox.init();
+                    } else if ($(event.target)[0].tagName === "A" || $(event.target).parent()[0].tagName === "A") {
+                       if (event.target.classList.contains('fa')) {
+                            var theLink = event.target.parentElement.href;
+                            console.log('theLink of parent = ', theLink)
+                            window.open(theLink, '_blank');
+                        } else {
+                            console.log('linky de non parent = ', event.target.href)
+                            window.open(event.target.href, '_blank');
+
+                        }
+                    }
                 });
 
             });
 
     };
+
     
 
    /* Stat Counter
@@ -338,7 +354,7 @@
                 $.ajax({
     
                     type: "POST",
-                    url: "inc/sendEmail.php",
+                    url: "php_mailer/mail_handler.php",
                     data: $(form).serialize(),
                     beforeSend: function() { 
     
