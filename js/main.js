@@ -336,6 +336,13 @@
 
     };
 
+    var contactInfo = function() {
+        $("#phoneNum").append("<p><a href='tel:7147421580'>(714)742-1580</a></p>")
+        $("#emailAdd").append("<p><a href='mailto:danielkstone@mail.com'>danielkstone@mail.com</a></p>")
+
+    };
+
+
 
    /* Contact Form
     * ------------------------------------------------------ */
@@ -479,6 +486,8 @@
         clAOS();
         clAjaxChimp();
         clBackToTop();
+        contactInfo();
+
 
     })();
         
