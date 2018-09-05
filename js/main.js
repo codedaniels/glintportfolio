@@ -152,10 +152,8 @@
                     } else if ($(event.target)[0].tagName === "A" || $(event.target).parent()[0].tagName === "A") {
                        if (event.target.classList.contains('fa')) {
                             var theLink = event.target.parentElement.href;
-                            console.log('theLink of parent = ', theLink)
                             window.open(theLink, '_blank');
                         } else {
-                            console.log('linky de non parent = ', event.target.href)
                             window.open(event.target.href, '_blank');
 
                         }
@@ -338,6 +336,13 @@
 
     };
 
+    var contactInfo = function() {
+        $("#phoneNum").append("<p><a href='tel:7147421580'>(714)742-1580</a></p>")
+        $("#emailAdd").append("<p><a href='mailto:danielkstone@mail.com'>danielkstone@mail.com</a></p>")
+
+    };
+
+
 
    /* Contact Form
     * ------------------------------------------------------ */
@@ -481,6 +486,8 @@
         clAOS();
         clAjaxChimp();
         clBackToTop();
+        contactInfo();
+
 
     })();
         
