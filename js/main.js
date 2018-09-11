@@ -337,7 +337,7 @@
     };
 
     var contactInfo = function() {
-        $("#phoneNum").append("<p><a href='tel:7147421580'>(714)742-1580</a></p>")
+        $("#phoneNum").append("<p><a href='tel:7149220115'>(714)922-0115</a></p>")
         $("#emailAdd").append("<p><a href='mailto:danielkstone@mail.com'>danielkstone@mail.com</a></p>")
 
     };
@@ -383,14 +383,31 @@
                         }
     
                     },
+
+                    success: function(msg) {
+    
+                        // Message was sent
+                        if (msg == 'OK') {
+                            sLoader.slideUp("slow"); 
+                            $('.message-warning').fadeOut();
+                            $('#contactForm').fadeOut();
+                            $('.message-success').fadeIn();
+                        }
+                        // There was an error
+                        else {
+                            sLoader.slideUp("slow"); 
+                            $('.message-warning').html(msg);
+                            $('.message-warning').slideDown("slow");
+                        }
+    
+                    },
                     error: function() {
     
                         sLoader.slideUp("slow"); 
                         $('.message-warning').html("Something went wrong. Please try again.");
                         $('.message-warning').slideDown("slow");
     
-                    }
-    
+                    }    
                 });
             }
     

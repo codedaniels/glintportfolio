@@ -2676,6 +2676,14 @@ html.no-csstransitions .home-content__main {
     position: relative;
 }
 
+.skill-text {
+    font-size: 0.15em;
+}
+
+.skills-inside {
+    display: inline-block;
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## slider
@@ -2685,10 +2693,10 @@ html.no-csstransitions .home-content__main {
     padding-bottom: 9rem;
     text-align: center;
     position: relative;
+    line-height: 0.85;
 }
 
 .skills {
-    display: block;
     opacity: 1;
     padding: 1.5rem 2.8rem;
     -webkit-transition: opacity 0.5s ease-in-out;
@@ -2696,7 +2704,9 @@ html.no-csstransitions .home-content__main {
 }
 
 .skill-icon {
+    display: inline-block;
     font-size: 7em;
+    padding-top: 1em;
 }
 
 
