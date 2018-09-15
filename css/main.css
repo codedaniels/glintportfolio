@@ -2425,7 +2425,7 @@ html.no-csstransitions .home-content__main {
     background-color: rgba(0, 0, 0, 0.8);
     content: "";
     opacity: 0;
-    visibility: hidden;
+    visibility: visible;
     position: absolute;
     top: 0;
     left: 0;
@@ -2452,7 +2452,7 @@ html.no-csstransitions .home-content__main {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     opacity: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     -webkit-transform: scale(0.5);
@@ -2468,7 +2468,7 @@ html.no-csstransitions .home-content__main {
     padding: 0 3.3rem;
     z-index: 2;
     opacity: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     -webkit-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
@@ -2512,7 +2512,7 @@ html.no-csstransitions .home-content__main {
     top: 3rem;
     left: 3rem;
     opacity: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     -webkit-transform: translate3d(0, -100%, 0);
     -ms-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -2531,7 +2531,7 @@ html.no-csstransitions .home-content__main {
     top: 3rem;
     left: 9rem;
     opacity: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     -webkit-transform: translate3d(0, -100%, 0);
     -ms-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -2551,7 +2551,7 @@ html.no-csstransitions .home-content__main {
     top: 3rem;
     left: 15rem;
     opacity: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     -webkit-transform: translate3d(0, -100%, 0);
     -ms-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -2637,13 +2637,26 @@ html.no-csstransitions .home-content__main {
  * responsive:
  * works
  * ------------------------------------------------------------------- */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .item-folio__title, .item-folio__cat {
         font-size: 1.3rem;
     }
+    .s-works {
+        padding-bottom: 12rem;
+    }
+    .s-works .intro-wrap {
+        padding: 12rem 0 25.2rem;
+    }
+    .works-content {
+        margin-top: -25.2rem;
+    }
+    .masonry__brick {
+        float: none;
+        width: 50%;
+    }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .s-works {
         padding-bottom: 12rem;
     }
@@ -2669,8 +2682,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-skills {
-    padding-top: 16.2rem;
-    padding-bottom: 16.8rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     background-color: #e6e6e6;
     color: #757575;
     position: relative;
@@ -2690,7 +2703,6 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .skills-outer {
     margin-top: 3.6rem;
-    padding-bottom: 9rem;
     text-align: center;
     position: relative;
     line-height: 0.85;
@@ -2705,10 +2717,29 @@ html.no-csstransitions .home-content__main {
 
 .skill-icon {
     display: inline-block;
-    font-size: 7em;
+    font-size: 6em;
     padding-top: 1em;
 }
 
+.agileIcon {
+    width: 90px;
+    height: 90px;
+}
+
+.agileIcon img {
+    width: 100%;
+    height: auto;
+}
+
+.vscodeIcon {
+    height: 80px;
+    width: 80px;
+}
+
+.vscodeIcon img {
+    width: 100%;
+    height: auto;
+}
 
 
 /* ------------------------------------------------------------------- 
@@ -2722,6 +2753,14 @@ html.no-csstransitions .home-content__main {
     }
     .skill-icon {
         font-size: 3em;
+    }
+    .agileIcon {
+        height: 50px;
+        width: 50px;
+    }
+    .vscodeIcon {
+        height: 40px;
+        width: 40px;
     }
 }
 
@@ -2908,12 +2947,18 @@ html.no-csstransitions .home-content__main {
     background-color: #121212;
 }
 
-.contact-secondary .contact-info {
+.contact-primary .contact-info {
     position: relative;
+    justify-content: space-between;
+
 }
 
-.contact-secondary .cinfo {
+.cinfo {
     margin-bottom: 4.8rem;
+    display: inline-block;
+    width: 33%;
+    justify-content: space-between;
+
 }
 
 .contact-social {
