@@ -2390,6 +2390,11 @@ html.no-csstransitions .home-content__main {
 /* ------------------------------------------------------------------- 
  * ## bricks/masonry
  * ------------------------------------------------------------------- */
+ .item-folio:hover img{
+    visibility: visible;
+    opacity: 0.1;
+}
+
 .masonry:after {
     content: "";
     display: table;
@@ -2452,7 +2457,7 @@ html.no-csstransitions .home-content__main {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     opacity: 0;
-    /* visibility: hidden; */
+    visibility: hidden;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     -webkit-transform: scale(0.5);
@@ -2602,12 +2607,14 @@ html.no-csstransitions .home-content__main {
 
 /* on hover 
  * ----------------------------------------------- */
-.item-folio:hover .item-folio__thumb a::before {
+
+
+.item-folio:hover  a::before {
     opacity: 1;
     visibility: visible;
 }
 
-.item-folio:hover .item-folio__thumb a::after {
+.item-folio:hover a::after {
     opacity: 1;
     visibility: visible;
     -webkit-transform: scale(1);
@@ -2615,7 +2622,7 @@ html.no-csstransitions .home-content__main {
     transform: scale(1);
 }
 
-.item-folio:hover .item-folio__thumb img {
+.item-folio:hover img {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
@@ -2631,6 +2638,8 @@ html.no-csstransitions .home-content__main {
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
+
 
 
 /* ------------------------------------------------------------------- 
