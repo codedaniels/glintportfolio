@@ -2435,6 +2435,17 @@ html.no-csstransitions .home-content__main {
     .about__line {
         height: 7.2rem;
     }
+    .about-desc ul li a{
+        height:12em;
+        width:12em;
+      }
+
+      .about-desc h2,p{
+        font-size:80%;
+      }
+      .about-desc ul{
+        padding:0;
+      }
 }
 
 @media only screen and (max-width: 400px) {
@@ -2444,6 +2455,16 @@ html.no-csstransitions .home-content__main {
     .stats__count {
         font-size: 7.8rem;
     }
+    .about-desc ul li a{
+        height:10em;
+        width:10em;
+      }
+      .about-desc h2,p{
+        font-size:65%;
+      }
+      .about-desc ul{
+        padding:0;
+      }
 }
 
 
