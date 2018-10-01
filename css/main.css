@@ -2200,7 +2200,7 @@ html.no-csstransitions .home-content__main {
 .s-about {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #77dd91;
+    background-color: #50C878;
     color: #010507;
     position: relative;
 }
@@ -2210,11 +2210,96 @@ html.no-csstransitions .home-content__main {
 }
 
 .about-desc {
-    font-size: 2.4rem;
-    line-height: 1.75;
-    text-align: center;
-    max-width: 1024px;
+    font-family:arial,sans-serif;
+    font-size:100%;
+    color:#fff;
+    align-content: center;
 }
+
+.about-desc h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.about-desc p {
+    padding: 0;
+    margin: 0;
+}
+
+.about-desc h2,p{
+    font-size:100%;
+    font-weight:normal;
+  }
+  
+  .about-desc ul,li{
+    list-style:none;
+  }
+  
+  .about-desc ul{
+    overflow:hidden;
+    padding:3em;
+  }
+  .about-desc ul li a{
+    text-decoration:none;
+    color:#000;
+    background:#98FB98;
+    display:block;
+    height:15em;
+    width:15em;
+    padding:1em;
+    -webkit-transform:rotate(-6deg);
+    -o-transform:rotate(-6deg);
+    -moz-transform:rotate(-6deg);
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -moz-transition:-moz-transform .15s linear;
+    -o-transition:-o-transform .15s linear;
+    -webkit-transition:-webkit-transform .15s linear;
+  
+  }
+
+  .about-desc ul li:nth-child(even) a{
+    -o-transform:rotate(4deg);
+    -webkit-transform:rotate(4deg);
+    -moz-transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#D0F0C0;
+  }
+
+  .about-desc ul li:nth-child(3n) a{
+    -o-transform:rotate(-3deg);
+    -webkit-transform:rotate(-3deg);
+    -moz-transform:rotate(-3deg);
+    position:relative;
+    top:-5px;
+    background:#BFECD9;
+  }
+
+  .about-desc ul li:nth-child(5n) a{
+    -o-transform:rotate(5deg);
+    -webkit-transform:rotate(5deg);
+    -moz-transform:rotate(5deg);
+    position:relative;
+    top:-10px;
+  }
+
+  .about-desc ul li a:hover,ul li a:focus{
+    -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    position:relative;
+    z-index:5;
+  }
+
+  .about-desc ul li{
+    margin:1em;
+    float:left;
+  }
 
 
 /* ------------------------------------------------------------------- 
@@ -2251,7 +2336,7 @@ html.no-csstransitions .home-content__main {
 .stats h5 {
     font-family: "montserrat-semibold", sans-serif;
     margin-top: 1.8rem;
-    color: #000000;
+    color: whitesmoke;
     font-size: 1.8rem;
     line-height: 1.333;
     position: relative;
@@ -2350,6 +2435,17 @@ html.no-csstransitions .home-content__main {
     .about__line {
         height: 7.2rem;
     }
+    .about-desc ul li a{
+        height:12em;
+        width:12em;
+      }
+
+      .about-desc h2,p{
+        font-size:80%;
+      }
+      .about-desc ul{
+        padding:0;
+      }
 }
 
 @media only screen and (max-width: 400px) {
@@ -2359,6 +2455,16 @@ html.no-csstransitions .home-content__main {
     .stats__count {
         font-size: 7.8rem;
     }
+    .about-desc ul li a{
+        height:10em;
+        width:10em;
+      }
+      .about-desc h2,p{
+        font-size:65%;
+      }
+      .about-desc ul{
+        padding:0;
+      }
 }
 
 
@@ -2727,9 +2833,19 @@ html.no-csstransitions .home-content__main {
 .skill-icon {
     display: inline-block;
     font-size: 6em;
-    padding-top: 1em;
+    margin: 2.5%;
 }
 
+.skills-section.frontend {
+    padding-top: 1em;
+    margin-bottom: 10em;
+
+}
+.skills-section.backend {
+    padding-top: 1em;
+    margin-bottom: 10em;
+
+}
 .agileIcon {
     width: 90px;
     height: 90px;
@@ -2750,6 +2866,14 @@ html.no-csstransitions .home-content__main {
     height: auto;
 }
 
+.skills-section {
+    display: none;
+}
+
+
+.skills-section.activated {
+    display: block;
+}
 
 /* ------------------------------------------------------------------- 
  * responsive:
