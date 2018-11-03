@@ -2875,6 +2875,14 @@ html.no-csstransitions .home-content__main {
     display: block;
 }
 
+.btn.highlighted {
+    background-color: #33a242;
+}
+
+.btn.btn-default:hover {
+    cursor: pointer;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * skills
