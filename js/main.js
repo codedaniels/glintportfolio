@@ -148,18 +148,28 @@
     * ------------------------------------------------------ */
     $(".frontendbtn").click(function(){
         $(".skills-section.frontend").addClass("activated");
+        $(".btn.frontendbtn").addClass("highlighted");
         $(".skills-section.backend").removeClass("activated");
+        $(".btn.backendbtn").removeClass("highlighted");
         $(".skills-section.devtools").removeClass("activated");
+        $(".btn.devtoolsbtn").removeClass("highlighted");
     })
     $(".backendbtn").click(function(){
         $(".skills-section.frontend").removeClass("activated");
+        $(".btn.frontendbtn").removeClass("highlighted");
         $(".skills-section.backend").addClass("activated");
+        $(".btn.backendbtn").addClass("highlighted");
         $(".skills-section.devtools").removeClass("activated");
+        $(".btn.devtoolsbtn").removeClass("highlighted");
     })   
     $(".devtoolsbtn").click(function(){
         $(".skills-section.frontend").removeClass("activated");
+        $(".btn.frontendbtn").removeClass("highlighted");
         $(".skills-section.backend").removeClass("activated");
+        $(".btn.backendbtn").removeClass("highlighted");
         $(".skills-section.devtools").addClass("activated");
+        $(".btn.devtoolsbtn").addClass("highlighted");
+
     })   
 
 
